@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strefa Wiedzy — Mazowsze 55+</title>
+  <style>
+    body {margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;line-height:1.6;background:#f9f9f9;}
+    header {background:#56AFE3;color:#fff;padding:1rem;display:flex;justify-content:space-between;align-items:center;}
+    header h1 {margin:0;font-size:1.3rem;}
+    .btn {background:#fff;color:#26295C;padding:.5rem 1rem;margin-left:.5rem;border-radius:.6rem;text-decoration:none;font-weight:bold;}
+    .section {padding:1rem;}
+    .grid {display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+    .card {background:#fff;border:1px solid #ddd;border-radius:1rem;padding:1rem;text-decoration:none;color:#000;transition:.3s;}
+    .card:hover {background:#f0f8ff;}
+    h2 {color:#26295C;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📚 Strefa Wiedzy — Mazowsze 55+</h1>
+    <div>
+      <a href="#szukaj" class="btn">🔎 Szukaj</a>
+      <a href="slowko.html" class="btn">📘 Słowniczek</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Słówko dnia -->
+    <section class="section" id="slowko">
+      <h2>📖 Słówko dnia</h2>
+      <p><strong>🔔 Powiadomienie</strong> — krótka wiadomość, która wyskakuje na ekranie telefonu.</p>
+      <a href="slowko.html" class="btn">📘 Zobacz archiwum słówek</a>
+    </section>
+
+    <!-- Nowości -->
+    <section class="section" id="nowosci">
+      <h2>🆕 Nowości</h2>
+      <div class="grid">
+        <article class="card"><h3>Nowy poradnik o płatnościach</h3><p>Dowiedz się, jak korzystać z BLIK i karty w smartfonie.</p></article>
+        <article class="card"><h3>Bezpieczne rozmowy online</h3><p>Udostępnianie ekranu w WhatsApp i Messengerze.</p></article>
+        <article class="card"><h3>Aplikacja mObywatel</h3><p>Twoje dokumenty w telefonie.</p></article>
+      </div>
+    </section>
+
+    <!-- Mini sekcja -->
+    <section class="section" id="mini">
+      <h2>🎲 Rozrywka i ciekawostki</h2>
+      <div class="grid">
+        <article class="card"><h3>🎲 Gry i zabawy</h3><p>Krzyżówki i quizy na pamięć.</p></article>
+        <article class="card"><h3>✍️ Swoimi słowami</h3><p>Podziel się własnym doświadczeniem.</p></article>
+        <article class="card"><h3>✨ Ciekawostki</h3><p>Cyfrowe fakty i porady.</p></article>
+        <article class="card"><h3>🤖 AI – zaprzyjaźnij się</h3><p>Poznaj sztuczną inteligencję.</p></article>
+      </div>
+    </section>
+
+    <!-- Kategorie tematyczne -->
+    <section class="section" id="tematy">
+      <h2>📂 Działy tematyczne</h2>
+      <div class="grid">
+        <a href="smartfon.html" class="card"><h3>📱 1 smartfon = 100 możliwości</h3><p>Poradniki krok po kroku.</p></a>
+        <a href="#" class="card"><h3>👥 Bliżej – rozmawiaj online</h3><p>WhatsApp, Messenger — wideo i udostępnianie ekranu.</p></a>
+        <a href="#" class="card"><h3>💰 Pieniądze – zakupy, opłaty, usługi</h3><p>Płatności, bankowość, zakupy online.</p></a>
+        <a href="#" class="card"><h3>🩺 Zdrowie – lekarz, recepty, skierowania</h3><p>Jak sprawdzić e-recepty i umówić wizytę.</p></a>
+        <a href="#" class="card"><h3>🏛️ Urząd – sprawy obywatelskie</h3><p>Załatwianie spraw urzędowych online.</p></a>
+        <a href="#" class="card"><h3>🚨 Alert! Oszustwo</h3><p>Najczęstsze triki i jak się bronić.</p></a>
+        <a href="#" class="card"><h3>🎨 Pasje – hobby, rozrywka, kreatywność</h3><p>Rozwijaj zainteresowania i korzystaj z kultury online.</p></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
