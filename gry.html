@@ -11,14 +11,15 @@
       margin:0;
       padding:1rem;
       line-height:1.6;
-      text-align:center;
     }
     h1 {
+      text-align:center;
       color:#26295C;
       margin-top: 1rem;
     }
     .back {
-      display:inline-block;
+      display:block;
+      text-align:center;
       margin: 1rem auto 2rem;
       background:#56AFE3;
       color:#fff;
@@ -26,24 +27,52 @@
       border-radius:.6rem;
       text-decoration:none;
       font-weight:600;
+      width: fit-content;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto 3rem;
     }
     .quiz-box {
-      max-width: 900px;
-      margin: 0 auto 2rem;
       background:#fff;
       padding:1rem;
       border-radius:16px;
       box-shadow: 0 2px 6px rgba(0,0,0,.1);
-      text-align:left;
     }
     .quiz-box h2 {
       color:#26295C;
       margin-top:0;
+      text-align:center;
+    }
+    .quiz-box p {
+      text-align:center;
+      color:#555;
+      margin-bottom:.8rem;
     }
     iframe {
       width:100%;
+      height:500px;
       border:none;
       border-radius:12px;
+    }
+    /* Specjalne ustawienie dla Genially */
+    .genially-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .genially-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -52,20 +81,32 @@
   <h1>📝 Quizy</h1>
   <a class="back" href="index.html">⬅️ Wróć do strony głównej</a>
 
-  <div class="quiz-box">
-    <h2>🧠 Dopasuj pojęcia (Quizlet)</h2>
-    <p>Ćwicz pamięć i refleks, dopasowując pojęcia w pary:</p>
-    <iframe src="https://quizlet.com/1015809270/match/embed?i=18x9r8&x=1jj1"
-            height="500"></iframe>
-  </div>
+  <div class="grid">
+    <div class="quiz-box">
+      <h2>🧠 Quizlet</h2>
+      <p>Dopasuj pojęcia w pary</p>
+      <iframe src="https://quizlet.com/1015809270/match/embed?i=18x9r8&x=1jj1"></iframe>
+    </div>
 
-  <div class="quiz-box">
-    <h2>📚 Quiz interaktywny (LearningApps)</h2>
-    <p>Rozwiąż zadanie interaktywne:</p>
-    <iframe src="https://learningapps.org/watch?v=p6jc8668301"
-            style="border:0px;width:100%;height:500px"
-            allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-    </iframe>
+    <div class="quiz-box">
+      <h2>📚 LearningApps</h2>
+      <p>Rozwiąż quiz interaktywny</p>
+      <iframe src="https://learningapps.org/watch?v=p6jc8668301"
+              allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+      </iframe>
+    </div>
+
+    <div class="quiz-box">
+      <h2>🎵 Jaka to melodia? (Genially)</h2>
+      <p>Rozpoznaj utwory muzyczne</p>
+      <div class="genially-wrapper">
+        <iframe title="Jaka to melodia?" frameborder="0"
+                src="https://view.genially.com/5c897ccde1906b76bf4ad63a"
+                type="text/html" allowscriptaccess="always" allowfullscreen="true"
+                scrolling="yes" allownetworking="all">
+        </iframe>
+      </div>
+    </div>
   </div>
 
 </body>
