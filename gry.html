@@ -57,3 +57,60 @@
       color:#555;
       margin-bottom:.8rem;
       font-size:1rem;
+    }
+    iframe {
+      width:100%;
+      height:500px;
+      border:none;
+      border-radius:12px;
+    }
+    .genially-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .genially-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📝 Quizy</h1>
+  <a class="back" href="index.html">⬅️ Wróć do strony głównej</a>
+
+  <div class="grid">
+    <!-- Quizlet -->
+    <div class="quiz-box">
+      <h2>🧠 Quizlet</h2>
+      <p>Dopasuj pojęcia w pary</p>
+      <iframe src="https://quizlet.com/1015809270/match/embed?i=18x9r8&x=1jj1"></iframe>
+    </div>
+
+    <!-- LearningApps -->
+    <div class="quiz-box">
+      <h2>📚 LearningApps</h2>
+      <p>Rozwiąż quiz interaktywny</p>
+      <iframe src="https://learningapps.org/watch?v=p6jc8668301" allowfullscreen></iframe>
+    </div>
+
+    <!-- Genially -->
+    <div class="quiz-box">
+      <h2>🎵 Jaka to melodia? (Genially)</h2>
+      <p>Rozpoznaj utwory muzyczne</p>
+      <div class="genially-wrapper">
+        <iframe src="https://view.genially.com/5c897ccde1906b76bf4ad63a"
+                allowfullscreen scrolling="yes"></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
