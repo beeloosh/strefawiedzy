@@ -5,63 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>🧩 Gry i zabawy – Strefa Wiedzy</title>
   <style>
-    body {font-family: system-ui, sans-serif; background:#f9f9f9; margin:0; padding:1rem; line-height:1.6;}
-    h1 {text-align:center; color:#26295C;}
+    body {
+      font-family: system-ui, sans-serif;
+      background:#f9f9f9;
+      margin:0;
+      padding:1rem;
+      line-height:1.6;
+    }
+    h1 {
+      text-align:center;
+      color:#26295C;
+      margin-top: 1rem;
+    }
+    .back {
+      display:block;
+      text-align:center;
+      margin: 0 auto 2rem;
+      background:#56AFE3;
+      color:#fff;
+      padding:.6rem 1.2rem;
+      border-radius:.6rem;
+      text-decoration:none;
+      width: fit-content;
+      font-weight:600;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 28px;
       max-width: 1200px;
-      margin: 2rem auto;
+      margin: 0 auto 3rem;
     }
     .game {
-      background:#fff; padding:1rem; border-radius:16px;
+      background:#fff;
+      padding:1rem;
+      border-radius:16px;
       box-shadow: 0 2px 6px rgba(0,0,0,.1);
     }
-    .game h2 {font-size:1.3rem; margin:.2rem 0 .5rem; color:#26295C;}
-    .game p {margin:.3rem 0 .8rem; color:#444;}
-    iframe {width:100%; border:none; border-radius:12px;}
-    a {color:#56AFE3; text-decoration:none; font-weight:600;}
-  </style>
-</head>
-<body>
-
-<h1>🧩 Gry i zabawy</h1>
-
-<div class="grid">
-  <div class="game">
-    <h2>🔢 Sudoku – poziom łatwy</h2>
-    <p>Ćwicz logiczne myślenie bez presji czasu.</p>
-    <iframe src="https://widget.websudoku.com/?level=1"
-            width="320" height="420" scrolling="no" frameborder="0"
-            style="height:600px"></iframe>
-    <p><a href="https://www.websudoku.com" target="_blank">Pełny ekran</a></p>
-  </div>
-
-  <div class="game">
-    <h2>⭕❌ Kółko i krzyżyk</h2>
-    <p>Prosta gra dla 1–2 osób.</p>
-    <iframe src="https://solitaires-online.com/embed-tic-tac-toe.html?theme=light"
-            style="height:560px"></iframe>
-    <p><a href="https://solitaires-online.com/tic-tac-toe/" target="_blank">Pełny ekran</a></p>
-  </div>
-
-  <div class="game">
-    <h2>🧠 Memory – dopasuj pary</h2>
-    <p>Ćwiczy pamięć i koncentrację, duże kafelki.</p>
-    <iframe src="https://www.htmlgames.com/embed/emoji-pairs/"
-            style="height:600px"></iframe>
-    <p><a href="https://www.htmlgames.com/game/Emoji%2BPairs" target="_blank">Pełny ekran</a></p>
-  </div>
-
-  <div class="game">
-    <h2>💭 Number Crunch – gra logiczna</h2>
-    <p>Ćwicz spostrzegawczość i łączenie elementów.</p>
-    <iframe src="https://www.htmlgames.com/embed/number-crunch/"
-            style="height:600px"></iframe>
-    <p><a href="https://www.htmlgames.com/game/Number%2BCrunch" target="_blank">Pełny ekran</a></p>
-  </div>
-</div>
-
-</body>
-</html>
