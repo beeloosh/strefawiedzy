@@ -5,80 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>📝 Quizy – Strefa Wiedzy</title>
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background:#f9f9f9;
-      margin:0;
-      padding:1rem;
-      line-height:1.6;
-      color:#444;
-    }
-    h1 {
-      text-align:center;
-      color:#26295C;
-      margin-top: 1rem;
-    }
-    .back {
-      display:block;
-      text-align:center;
-      margin: 1rem auto 2rem;
-      background:#56AFE3;
-      color:#fff;
-      padding:.6rem 1.2rem;
-      border-radius:.6rem;
-      text-decoration:none;
-      font-weight:600;
-      width: fit-content;
-    }
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 28px;
-      max-width: 1100px;
-      margin: 0 auto 3rem;
-    }
-    .quiz-box {
-      background:#fff;
-      padding:1rem;
-      border-radius:16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,.1);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-    }
-    .quiz-box h2 {
-      color:#26295C;
-      margin-top:0;
-      text-align:center;
-      font-size:1.3rem;
-    }
-    .quiz-box p {
-      text-align:center;
-      color:#555;
-      margin-bottom:.8rem;
-      font-size:1rem;
-    }
-    iframe {
-      width:100%;
-      height:500px;
-      border:none;
-      border-radius:12px;
-    }
-    .genially-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 12px;
-    }
-    .genially-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+    body {font-family: system-ui, sans-serif; background:#f9f9f9; margin:0; padding:1rem; line-height:1.6; color:#444;}
+    h1 {text-align:center; color:#26295C; margin-top: 1rem;}
+    .back {display:block; text-align:center; margin: 1rem auto 2rem; background:#56AFE3; color:#fff; padding:.6rem 1.2rem; border-radius:.6rem; text-decoration:none; font-weight:600; width: fit-content;}
+    .grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; max-width: 1100px; margin: 0 auto 3rem;}
+    .quiz-box {background:#fff; padding:1rem; border-radius:16px; box-shadow: 0 2px 6px rgba(0,0,0,.1);}
+    .quiz-box h2 {color:#26295C; margin:.2rem 0 .2rem; text-align:center; font-size:1.3rem;}
+    .quiz-box p {text-align:center; color:#555; margin:.2rem 0 .8rem; font-size:1rem;}
+    iframe {width:100%; height:500px; border:none; border-radius:12px;}
+    .genially-wrapper {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;}
+    .genially-wrapper iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;}
+    .fallback {text-align:center; margin-top:.5rem;}
+    .fallback a {color:#56AFE3; font-weight:600; text-decoration:none;}
   </style>
 </head>
 <body>
@@ -91,14 +29,22 @@
     <div class="quiz-box">
       <h2>🧠 Quizlet</h2>
       <p>Dopasuj pojęcia w pary</p>
-      <iframe src="https://quizlet.com/1015809270/match/embed?i=18x9r8&x=1jj1"></iframe>
+      <iframe
+        src="https://quizlet.com/1015809270/match/embed?i=18x9r8&x=1jj1"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+      </iframe>
+      <div class="fallback"><a href="https://quizlet.com/1015809270/match" target="_blank" rel="noopener">Otwórz w nowej karcie</a></div>
     </div>
 
     <!-- LearningApps -->
     <div class="quiz-box">
       <h2>📚 LearningApps</h2>
       <p>Rozwiąż quiz interaktywny</p>
-      <iframe src="https://learningapps.org/watch?v=p6jc8668301" allowfullscreen></iframe>
+      <iframe
+        src="https://learningapps.org/watch?v=p6jc8668301"
+        loading="lazy" allowfullscreen>
+      </iframe>
+      <div class="fallback"><a href="https://learningapps.org/watch?v=p6jc8668301" target="_blank" rel="noopener">Otwórz w nowej karcie</a></div>
     </div>
 
     <!-- Genially -->
@@ -106,9 +52,12 @@
       <h2>🎵 Jaka to melodia? (Genially)</h2>
       <p>Rozpoznaj utwory muzyczne</p>
       <div class="genially-wrapper">
-        <iframe src="https://view.genially.com/5c897ccde1906b76bf4ad63a"
-                allowfullscreen scrolling="yes"></iframe>
+        <iframe
+          src="https://view.genially.com/5c897ccde1906b76bf4ad63a"
+          loading="lazy" allow="fullscreen; autoplay" allowfullscreen scrolling="yes">
+        </iframe>
       </div>
+      <div class="fallback"><a href="https://view.genially.com/5c897ccde1906b76bf4ad63a" target="_blank" rel="noopener">Otwórz w nowej karcie</a></div>
     </div>
   </div>
 
