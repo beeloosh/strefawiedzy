@@ -22,22 +22,19 @@
     }
     .grid {
       display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px; max-width: 1100px; margin: 0 auto 3rem;
+      gap: 28px; max-width: 1000px; margin: 0 auto 3rem;
     }
     .card {
-      background:#fff; padding:1.25rem; border-radius:16px;
+      background:#fff; padding:1.5rem; border-radius:16px;
       box-shadow:0 2px 6px rgba(0,0,0,.1); text-align:center;
+      display:flex; flex-direction:column; justify-content:space-between;
     }
-    .card h2 { color:#26295C; margin:.2rem 0 .4rem; font-size:1.3rem; }
-    .card p { margin:.2rem auto 1rem; max-width:640px; color:#555; }
-    .card img {
-      max-width:100%; border-radius:.8rem; box-shadow:0 2px 4px rgba(0,0,0,.06);
-      margin: .5rem auto 1rem; display:block;
-    }
+    .card h2 { color:#26295C; margin:.2rem 0 .6rem; font-size:1.3rem; }
+    .card p { margin:0 auto 1.2rem; max-width:640px; color:#555; font-size:1.05rem; }
     .btn {
       background:#56AFE3; color:#fff; padding: .9rem 1.6rem;
       border-radius:.8rem; text-decoration:none; font-size:1.1rem; font-weight:700;
-      display:inline-block;
+      display:inline-block; margin-top:auto;
     }
     .btn:focus, .btn:hover { filter:brightness(1.05); }
   </style>
@@ -46,42 +43,30 @@
 
   <h1>🎲 Gry i quizy</h1>
   <a class="back" href="index.html">⬅️ Wróć do strony głównej</a>
-  <p class="note">Niektóre serwisy blokują osadzanie na zewnętrznych stronach. Dlatego otwieramy gry w nowej karcie – to najprostsze i najpewniejsze rozwiązanie.</p>
+  <p class="note">Kliknij w grę, aby otworzyć ją w nowej karcie i rozpocząć zabawę.</p>
 
   <div class="grid">
-    <!-- What Came First -->
     <div class="card">
       <h2>🧩 What Came First? — Co było pierwsze?</h2>
-      <p>Zgadnij, które wydarzenia, wynalazki i dzieła pojawiły się wcześniej. Wystarczy kliknąć „Zagraj teraz”.</p>
-      <img src="https://artsandculture.google.com/static/experiments/what-came-first/icon-512.png"
-           alt="Podgląd gry What Came First?">
+      <p>Zgadnij, które wydarzenia, wynalazki i dzieła pojawiły się wcześniej.</p>
       <a class="btn" href="https://artsandculture.google.com/experiment/what-came-first/ZQGBUPErEE3bVg" target="_blank" rel="noopener">▶️ Zagraj teraz</a>
     </div>
 
-    <!-- Quizlet -->
     <div class="card">
       <h2>🧠 Quizlet — Dopasuj pojęcia</h2>
       <p>Ćwicz pamięć i refleks, dopasowując pojęcia w pary. Prosto i bez logowania.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Quizlet_Logo.svg/512px-Quizlet_Logo.svg.png"
-           alt="Logo Quizlet" style="max-width:160px; background:#fff; box-shadow:none;">
       <a class="btn" href="https://quizlet.com/1015809270/match" target="_blank" rel="noopener">🧩 Otwórz quiz</a>
     </div>
 
-    <!-- LearningApps -->
     <div class="card">
       <h2>📚 LearningApps — Quiz interaktywny</h2>
       <p>Sprawdź spostrzegawczość i pamięć – szybkie zadanie interaktywne.</p>
-      <img src="https://learningapps.org/images/logo/logo_200.png"
-           alt="Podgląd quizu LearningApps" style="max-width:200px;">
       <a class="btn" href="https://learningapps.org/watch?v=p6jc8668301" target="_blank" rel="noopener">🧠 Rozwiąż teraz</a>
     </div>
 
-    <!-- Genially -->
     <div class="card">
       <h2>🎵 Genially — „Jaka to melodia?”</h2>
       <p>Rozpoznaj utwory muzyczne w krótkiej, przyjemnej zabawie.</p>
-      <img src="https://genially.global/wp-content/uploads/2021/01/Genially-Logo-Primary.png"
-           alt="Logo Genially" style="max-width:200px; background:#fff; box-shadow:none;">
       <a class="btn" href="https://view.genially.com/5c897ccde1906b76bf4ad63a" target="_blank" rel="noopener">🎶 Otwórz quiz</a>
     </div>
   </div>
