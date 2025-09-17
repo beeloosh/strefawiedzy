@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🧩 Gry i zabawy – Strefa Wiedzy</title>
+  <title>🎲 Gry i quizy – Strefa Wiedzy</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -29,6 +29,12 @@
       width: fit-content;
       font-weight:600;
     }
+    h2.section-title {
+      text-align:center;
+      color:#26295C;
+      margin: 2rem 0 1rem;
+      font-size:1.8rem;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -42,3 +48,69 @@
       border-radius:16px;
       box-shadow: 0 2px 6px rgba(0,0,0,.1);
     }
+    .game h3 {
+      font-size:1.3rem;
+      margin:.2rem 0 .5rem;
+      color:#26295C;
+    }
+    .game p {
+      margin:.3rem 0 .8rem;
+      color:#444;
+    }
+    iframe {
+      width:100%;
+      border:none;
+      border-radius:12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎲 Gry i quizy</h1>
+  <a class="back" href="index.html">⬅️ Wróć do strony głównej</a>
+
+  <!-- GRY -->
+  <h2 class="section-title">🧩 Gry i zabawy</h2>
+  <div class="grid">
+    <div class="game">
+      <h3>🔢 Sudoku – poziom łatwy</h3>
+      <p>Ćwicz logiczne myślenie bez presji czasu.</p>
+      <iframe src="https://widget.websudoku.com/?level=1"
+              height="600"></iframe>
+    </div>
+
+    <div class="game">
+      <h3>⭕❌ Kółko i krzyżyk</h3>
+      <p>Prosta gra dla 1–2 osób.</p>
+      <iframe src="https://www.solitaireparadise.com/embed/tic-tac-toe/"
+              height="560"></iframe>
+    </div>
+
+    <div class="game">
+      <h3>🧠 Memory – dopasuj pary</h3>
+      <p>Ćwiczy pamięć i koncentrację.</p>
+      <iframe src="https://www.htmlgames.com/embed/Emoji%2BPairs/"
+              height="600"></iframe>
+    </div>
+
+    <div class="game">
+      <h3>💭 Number Crunch – gra logiczna</h3>
+      <p>Ćwicz spostrzegawczość i łączenie elementów.</p>
+      <iframe src="https://www.htmlgames.com/embed/Number%2BCrunch/"
+              height="600"></iframe>
+    </div>
+  </div>
+
+  <!-- QUIZY -->
+  <h2 class="section-title">📝 Quizy i dopasowywanki</h2>
+  <div class="grid">
+    <div class="game">
+      <h3>🧠 Dopasuj pojęcia</h3>
+      <p>Ćwicz pamięć i refleks, dopasowując pojęcia w pary.</p>
+      <iframe src="https://quizlet.com/1015809270/match/embed?i=18x9r8&x=1jj1"
+              height="500"></iframe>
+    </div>
+  </div>
+
+</body>
+</html>
