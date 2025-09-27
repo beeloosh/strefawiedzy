@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎲 Quiz o Emoji – Strefa Wiedzy</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background:#f9f9f9;
+      margin:0; padding:1rem;
+      line-height:1.6; color:#444;
+      max-width:900px; margin:auto;
+    }
+    h1 { text-align:center; color:#26295C; margin:1rem 0; }
+    .back {
+      display:block; text-align:center; margin: 1rem auto 1.5rem;
+      background:#56AFE3; color:#fff; padding:.6rem 1.2rem;
+      border-radius:.6rem; text-decoration:none; font-weight:600; width:fit-content;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background:#fff;
+    }
+    .question p { font-weight: bold; color:#26295C; }
+    button {
+      margin: 10px 10px 0 0;
+      padding: 10px 20px;
+      background: #56AFE3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight:600;
+    }
+    button:hover { filter:brightness(1.1); }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color:#26295C;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎲 Quiz o Emoji 🤔</h1>
+  <a class="back" href="ciekawostka-emotikony.html">⬅️ Wróć do ciekawostki</a>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. Emoji 😅 oznacza:</p>
+      <label><input type="radio" name="q1" value="a"> Radość i śmiech bez powodu</label><br>
+      <label><input type="radio" name="q1" value="b"> Ulgę albo zakłopotanie</label><br>
+      <label><input type="radio" name="q1" value="c"> Sarkazm</label><br>
+      <label><input type="radio" name="q1" value="d"> Chęć kłamstwa</label>
+    </div>
+
+    <div class="question">
+      <p>2. Połącz emoji z jego znaczeniem (wpisz litery w kolejności, np. 1B,2C...)</p>
+      <p>1. 🤔  2. 🤭  3. 🤐  4. 🙃</p>
+      <input type="text" name="q2" placeholder="np. 1B,2C,3A,4D">
+    </div>
+
+    <div class="question">
+      <p>3. Uzupełnij lukę: Emoji 🤩 wyraża __________.</p>
+      <input type="text" name="q3">
+    </div>
+
+    <div class="question">
+      <p>4. Które z tych emoji najczęściej używane jest do okazania miłości?</p>
+      <label><input type="radio" name="q4" value="a"> 😍</label><br>
+      <label><input type="radio" name="q4" value="b"> 🤓</label><br>
+      <label><input type="radio" name="q4" value="c"> 🤡</label><br>
+      <label><input type="radio" name="q4" value="d"> 😛</label>
+    </div>
+
+    <div class="question">
+      <p>5. „To było tak śmieszne! ___” – jakie emoji pasuje?</p>
+      <input type="text" name="q5">
+    </div>
+
+    <div class="question">
+      <p>6. Jakie znaczenie ma emoji 🫡?</p>
+      <input type="text" name="q6">
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Sprawdź wyniki</button>
+    <button type="reset">Spróbuj ponownie</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+
+      // 1
+      if (document.querySelector('input[name="q1"]:checked')?.value === "b") score++;
+
+      // 2
+      const q2 = document.querySelector('input[name="q2"]').value.replace(/\s/g,'').toUpperCase();
+      if (q2 === "1B,2C,3A,4D" || q2 === "1B2C3A4D") score++;
+
+      // 3
+      const q3 = document.querySelector('input[name="q3"]').value.toLowerCase();
+      if (q3.includes("podziw") || q3.includes("ekscyt")) score++;
+
+      // 4
+      if (document.querySelector('input[name="q4"]:checked')?.value === "a") score++;
+
+      // 5
+      const q5 = document.querySelector('input[name="q5"]').value;
+      if (q5.includes("😆")) score++;
+
+      // 6
+      const q6 = document.querySelector('input[name="q6"]').value.toLowerCase();
+      if (q6.includes("szacun") || q6.includes("sarkazm") || q6.includes("posłuszeń")) score++;
+
+      document.getElementById("result").textContent = 
+        "Twój wynik: " + score + " / 6 🎉";
+    }
+  </script>
+</body>
+</html>
