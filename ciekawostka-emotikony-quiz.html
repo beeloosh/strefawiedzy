@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🎲 Quiz o Emoji – Strefa Wiedzy</title>
+  <title>🎲 Quiz o Emoji – wpisywanie</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -26,6 +26,9 @@
       background:#fff;
     }
     .question p { font-weight: bold; color:#26295C; }
+    input[type="text"] {
+      padding: 8px; font-size: 1.1rem; width: 100%; max-width: 200px;
+    }
     button {
       margin: 10px 10px 0 0;
       padding: 10px 20px;
@@ -48,45 +51,38 @@
 </head>
 <body>
 
-  <h1>🎲 Quiz o Emoji 🤔</h1>
+  <h1>🎲 Quiz o Emoji – wpisywanie</h1>
   <a class="back" href="ciekawostka-emotikony.html">⬅️ Wróć do ciekawostki</a>
+
+  <p style="text-align:center; color:#666; max-width:600px; margin:0 auto 2rem;">
+    Ćwicz wpisywanie emoji z klawiatury (np. na komputerze <strong>Windows: Win + .</strong>, 
+    <strong>Mac: Ctrl + Cmd + Spacja</strong>, a na smartfonie z klawiatury ekranowej).
+  </p>
 
   <form id="quizForm">
     <div class="question">
-      <p>1. Emoji 😅 oznacza:</p>
-      <label><input type="radio" name="q1" value="a"> Radość i śmiech bez powodu</label><br>
-      <label><input type="radio" name="q1" value="b"> Ulgę albo zakłopotanie</label><br>
-      <label><input type="radio" name="q1" value="c"> Sarkazm</label><br>
-      <label><input type="radio" name="q1" value="d"> Chęć kłamstwa</label>
+      <p>1. Wpisz emoji śmiechu ze łzami (najpopularniejsze emoji):</p>
+      <input type="text" name="q1" placeholder="np. 😂">
     </div>
 
     <div class="question">
-      <p>2. Połącz emoji z jego znaczeniem (wpisz litery w kolejności, np. 1B,2C...)</p>
-      <p>1. 🤔  2. 🤭  3. 🤐  4. 🙃</p>
-      <input type="text" name="q2" placeholder="np. 1B,2C,3A,4D">
+      <p>2. Jak wygląda emoji serca? Wpisz je tutaj:</p>
+      <input type="text" name="q2" placeholder="np. ❤️">
     </div>
 
     <div class="question">
-      <p>3. Uzupełnij lukę: Emoji 🤩 wyraża __________.</p>
-      <input type="text" name="q3">
+      <p>3. Wpisz emoji przedstawiające kciuk w górę:</p>
+      <input type="text" name="q3" placeholder="np. 👍">
     </div>
 
     <div class="question">
-      <p>4. Które z tych emoji najczęściej używane jest do okazania miłości?</p>
-      <label><input type="radio" name="q4" value="a"> 😍</label><br>
-      <label><input type="radio" name="q4" value="b"> 🤓</label><br>
-      <label><input type="radio" name="q4" value="c"> 🤡</label><br>
-      <label><input type="radio" name="q4" value="d"> 😛</label>
+      <p>4. Jak wpiszesz emoji uśmiechniętej buźki?</p>
+      <input type="text" name="q4" placeholder="np. 🙂">
     </div>
 
     <div class="question">
-      <p>5. „To było tak śmieszne! ___” – jakie emoji pasuje?</p>
-      <input type="text" name="q5">
-    </div>
-
-    <div class="question">
-      <p>6. Jakie znaczenie ma emoji 🫡?</p>
-      <input type="text" name="q6">
+      <p>5. Wpisz emoji symbolizujące myślenie:</p>
+      <input type="text" name="q5" placeholder="np. 🤔">
     </div>
 
     <button type="button" onclick="checkAnswers()">Sprawdź wyniki</button>
@@ -98,31 +94,16 @@
   <script>
     function checkAnswers() {
       let score = 0;
+      const form = document.forms["quizForm"];
 
-      // 1
-      if (document.querySelector('input[name="q1"]:checked')?.value === "b") score++;
-
-      // 2
-      const q2 = document.querySelector('input[name="q2"]').value.replace(/\s/g,'').toUpperCase();
-      if (q2 === "1B,2C,3A,4D" || q2 === "1B2C3A4D") score++;
-
-      // 3
-      const q3 = document.querySelector('input[name="q3"]').value.toLowerCase();
-      if (q3.includes("podziw") || q3.includes("ekscyt")) score++;
-
-      // 4
-      if (document.querySelector('input[name="q4"]:checked')?.value === "a") score++;
-
-      // 5
-      const q5 = document.querySelector('input[name="q5"]').value;
-      if (q5.includes("😆")) score++;
-
-      // 6
-      const q6 = document.querySelector('input[name="q6"]').value.toLowerCase();
-      if (q6.includes("szacun") || q6.includes("sarkazm") || q6.includes("posłuszeń")) score++;
+      if (form.q1.value.includes("😂")) score++;
+      if (form.q2.value.includes("❤️") || form.q2.value.includes("♥️")) score++;
+      if (form.q3.value.includes("👍")) score++;
+      if (form.q4.value.includes("🙂") || form.q4.value.includes("😊")) score++;
+      if (form.q5.value.includes("🤔")) score++;
 
       document.getElementById("result").textContent = 
-        "Twój wynik: " + score + " / 6 🎉";
+        "Twój wynik: " + score + " / 5 🎉";
     }
   </script>
 </body>
