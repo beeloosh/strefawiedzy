@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🎲 Quiz o Emoji – wpisywanie</title>
+  <title>🎲 Quiz – Dopasuj znaczenie do emoji</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -26,8 +26,8 @@
       background:#fff;
     }
     .question p { font-weight: bold; color:#26295C; }
-    input[type="text"] {
-      padding: 8px; font-size: 1.1rem; width: 100%; max-width: 200px;
+    select {
+      padding: 8px; font-size: 1rem; margin-top: 8px;
     }
     button {
       margin: 10px 10px 0 0;
@@ -51,38 +51,63 @@
 </head>
 <body>
 
-  <h1>🎲 Quiz o Emoji – wpisywanie</h1>
+  <h1>🎲 Quiz – Dopasuj znaczenie do emoji</h1>
   <a class="back" href="ciekawostka-emotikony.html">⬅️ Wróć do ciekawostki</a>
-
-  <p style="text-align:center; color:#666; max-width:600px; margin:0 auto 2rem;">
-    Ćwicz wpisywanie emoji z klawiatury (np. na komputerze <strong>Windows: Win + .</strong>, 
-    <strong>Mac: Ctrl + Cmd + Spacja</strong>, a na smartfonie z klawiatury ekranowej).
-  </p>
 
   <form id="quizForm">
     <div class="question">
-      <p>1. Wpisz emoji śmiechu ze łzami (najpopularniejsze emoji):</p>
-      <input type="text" name="q1" placeholder="np. 😂">
+      <p>1. 😂</p>
+      <select name="q1">
+        <option value="">-- wybierz --</option>
+        <option value="a">Śmiech do łez</option>
+        <option value="b">Zakochanie</option>
+        <option value="c">Zmęczenie</option>
+        <option value="d">Złość</option>
+      </select>
     </div>
 
     <div class="question">
-      <p>2. Jak wygląda emoji serca? Wpisz je tutaj:</p>
-      <input type="text" name="q2" placeholder="np. ❤️">
+      <p>2. 🤔</p>
+      <select name="q2">
+        <option value="">-- wybierz --</option>
+        <option value="a">Myślenie</option>
+        <option value="b">Impreza</option>
+        <option value="c">Smutek</option>
+        <option value="d">Kłótnia</option>
+      </select>
     </div>
 
     <div class="question">
-      <p>3. Wpisz emoji przedstawiające kciuk w górę:</p>
-      <input type="text" name="q3" placeholder="np. 👍">
+      <p>3. ❤️</p>
+      <select name="q3">
+        <option value="">-- wybierz --</option>
+        <option value="a">Jedzenie</option>
+        <option value="b">Miłość</option>
+        <option value="c">Ziewanie</option>
+        <option value="d">Podróż</option>
+      </select>
     </div>
 
     <div class="question">
-      <p>4. Jak wpiszesz emoji uśmiechniętej buźki?</p>
-      <input type="text" name="q4" placeholder="np. 🙂">
+      <p>4. 😴</p>
+      <select name="q4">
+        <option value="">-- wybierz --</option>
+        <option value="a">Zmęczenie / sen</option>
+        <option value="b">Żart</option>
+        <option value="c">Miłość</option>
+        <option value="d">Złość</option>
+      </select>
     </div>
 
     <div class="question">
-      <p>5. Wpisz emoji symbolizujące myślenie:</p>
-      <input type="text" name="q5" placeholder="np. 🤔">
+      <p>5. 🎉</p>
+      <select name="q5">
+        <option value="">-- wybierz --</option>
+        <option value="a">Świętowanie</option>
+        <option value="b">Smutek</option>
+        <option value="c">Choroba</option>
+        <option value="d">Zakłopotanie</option>
+      </select>
     </div>
 
     <button type="button" onclick="checkAnswers()">Sprawdź wyniki</button>
@@ -96,11 +121,11 @@
       let score = 0;
       const form = document.forms["quizForm"];
 
-      if (form.q1.value.includes("😂")) score++;
-      if (form.q2.value.includes("❤️") || form.q2.value.includes("♥️")) score++;
-      if (form.q3.value.includes("👍")) score++;
-      if (form.q4.value.includes("🙂") || form.q4.value.includes("😊")) score++;
-      if (form.q5.value.includes("🤔")) score++;
+      if (form.q1.value === "a") score++;
+      if (form.q2.value === "a") score++;
+      if (form.q3.value === "b") score++;
+      if (form.q4.value === "a") score++;
+      if (form.q5.value === "a") score++;
 
       document.getElementById("result").textContent = 
         "Twój wynik: " + score + " / 5 🎉";
