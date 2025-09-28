@@ -10,11 +10,10 @@
     header h1 {margin:0;font-size:1.3rem;}
     .btn {background:#fff;color:#26295C;padding:.5rem 1rem;margin-left:.5rem;border-radius:.6rem;text-decoration:none;font-weight:bold;}
     .section {padding:1rem;}
-    .grid {display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+    .grid {display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
     .card {background:#fff;border:1px solid #ddd;border-radius:1rem;padding:1rem;text-decoration:none;color:#000;transition:.3s;}
     .card:hover {background:#f0f8ff;}
     h2 {color:#26295C;}
-    iframe {border:none;border-radius:.6rem;}
   </style>
 </head>
 <body>
@@ -38,9 +37,18 @@
     <section class="section" id="nowosci">
       <h2>🆕 Nowości</h2>
       <div class="grid">
-        <article class="card"><h3>Nowy poradnik o płatnościach</h3><p>Dowiedz się, jak korzystać z BLIK i karty w smartfonie.</p></article>
-        <article class="card"><h3>Bezpieczne rozmowy online</h3><p>Udostępnianie ekranu w WhatsApp i Messengerze.</p></article>
-        <article class="card"><h3>Aplikacja mObywatel</h3><p>Twoje dokumenty w telefonie.</p></article>
+        <article class="card">
+          <h3>Nowy poradnik o płatnościach</h3>
+          <p>Dowiedz się, jak korzystać z BLIK i karty w smartfonie.</p>
+        </article>
+        <article class="card">
+          <h3>Bezpieczne rozmowy online</h3>
+          <p>Udostępnianie ekranu w WhatsApp i Messengerze.</p>
+        </article>
+        <article class="card">
+          <h3>Aplikacja mObywatel</h3>
+          <p>Twoje dokumenty w telefonie.</p>
+        </article>
       </div>
     </section>
 
@@ -48,18 +56,10 @@
     <section class="section" id="mini">
       <h2>🎲 Rozrywka i ciekawostki</h2>
       <div class="grid">
-        <a href="gry.html" class="card">
-          <h3>🎲 Gry i zabawy</h3>
-          <p>Krzyżówki i quizy na pamięć.</p>
-        </a>
-        <a href="swoimi-slowami.html" class="card">
-          <h3>✍️ Swoimi słowami</h3>
-          <p>Podziel się własnym doświadczeniem.</p>
-        </a>
-        <a href="ciekawostki.html" class="card">
-          <h3>✨ Ciekawostki</h3>
-          <p>Cyfrowe fakty i porady.</p>
-        </a>
+        <article class="card"><h3>🎲 Gry i zabawy</h3><p>Krzyżówki i quizy na pamięć.</p></article>
+        <article class="card"><h3>✍️ Swoimi słowami</h3><p>Podziel się własnym doświadczeniem.</p></article>
+        <article class="card"><h3>✨ Ciekawostki</h3><p>Cyfrowe fakty i porady.</p></article>
+        <article class="card"><h3>🤖 AI – zaprzyjaźnij się</h3><p>Poznaj sztuczną inteligencję.</p></article>
       </div>
     </section>
 
@@ -67,54 +67,35 @@
     <section class="section" id="tematy">
       <h2>📂 Działy tematyczne</h2>
       <div class="grid">
-        <a href="smartfon.html" class="card"><h3>📱 1 smartfon = 100 możliwości</h3><p>Poradniki krok po kroku.</p></a>
-        <a href="#" class="card"><h3>👥 Bliżej – rozmawiaj online</h3><p>WhatsApp, Messenger — wideo i udostępnianie ekranu.</p></a>
-        <a href="#" class="card"><h3>💰 Pieniądze – zakupy, opłaty, usługi</h3><p>Płatności, bankowość, zakupy online.</p></a>
-        <a href="#" class="card"><h3>🩺 Zdrowie – lekarz, recepty, skierowania</h3><p>Jak sprawdzić e-recepty i umówić wizytę.</p></a>
-        <a href="#" class="card"><h3>🏛️ Urząd – sprawy obywatelskie</h3><p>Załatwianie spraw urzędowych online.</p></a>
-        <a href="#" class="card"><h3>🚨 Alert! Oszustwo</h3><p>Najczęstsze triki i jak się bronić.</p></a>
-      </div>
-    </section>
-
-    <!-- Sekcja PASJE -->
-    <section class="section" id="pasje">
-      <h2>🎨 Pasje – hobby, rozrywka, kreatywność</h2>
-      <div class="grid">
-
-        <a href="https://ninateka.pl/" target="_blank" rel="noopener" class="card">
-          <h3>🎬 Serwisy filmowe</h3>
-          <p>Obejrzyj spektakle, filmy i koncerty online w serwisie Ninateka i innych platformach.</p>
+        <a href="smartfon.html" class="card">
+          <h3>📱 1 smartfon = 100 możliwości</h3>
+          <p>Poradniki krok po kroku.</p>
         </a>
-
-        <div class="card">
-          <h3>📚 Wolne Lektury</h3>
-          <p>Czytaj darmowe książki online lub pobierz na smartfon i tablet.</p>
-          <iframe src="https://wolnelektury.pl/katalog/" width="100%" height="300"></iframe>
-        </div>
-
-        <a href="https://czytio.pl/blog/jak-czytac-e-booki-za-darmo-legalne-sposoby-i-najlepsze-zrodla-2025" 
-           target="_blank" rel="noopener" class="card">
-          <h3>📖 Jak korzystać z e-booków</h3>
-          <p>Praktyczny poradnik o darmowych i legalnych źródłach książek elektronicznych w Polsce.</p>
+        <a href="#" class="card">
+          <h3>👥 Bliżej – rozmawiaj online</h3>
+          <p>WhatsApp, Messenger — wideo i udostępnianie ekranu.</p>
         </a>
-
-        <a href="https://virtualo.pl/blog/naucz-sie-sluchac-audiobookow-w296/" 
-           target="_blank" rel="noopener" class="card">
-          <h3>🎧 Audiobooki</h3>
-          <p>Dowiedz się, jak słuchać audiobooków i zacząć korzystać z aplikacji do książek audio.</p>
+        <a href="#" class="card">
+          <h3>💰 Pieniądze – zakupy, opłaty, usługi</h3>
+          <p>Płatności, bankowość, zakupy online.</p>
         </a>
-
-        <a href="https://www.ted.com/talks" target="_blank" rel="noopener" class="card">
-          <h3>🎥 TED Talks</h3>
-          <p>Oglądaj inspirujące wystąpienia z polskimi napisami na YouTube i stronie TED.</p>
+        <a href="#" class="card">
+          <h3>🩺 Zdrowie – lekarz, recepty, skierowania</h3>
+          <p>Jak sprawdzić e-recepty i umówić wizytę.</p>
         </a>
-
-        <a href="google-arts-zagraj.html" class="card">
-          <h3>🖼️ Google Arts & Culture</h3>
-          <p>Odkrywaj dzieła sztuki online i baw się w interaktywne gry, takie jak Puzzle Party czy Pet Portraits. 
-          Dowiedz się też, jak zmienić język na polski.</p>
+        <a href="#" class="card">
+          <h3>🏛️ Urząd – sprawy obywatelskie</h3>
+          <p>Załatwianie spraw urzędowych online.</p>
         </a>
-
+        <a href="#" class="card">
+          <h3>🚨 Alert! Oszustwo</h3>
+          <p>Najczęstsze triki i jak się bronić.</p>
+        </a>
+        <!-- poprawiony kafelek -->
+        <a href="pasje.html" class="card">
+          <h3>🌸 Pasje – hobby, rozrywka, kreatywność</h3>
+          <p>Rozwijaj zainteresowania i korzystaj z kultury online. Kliknij, aby zobaczyć poradniki, Wolne Lektury, TED i więcej.</p>
+        </a>
       </div>
     </section>
   </main>
