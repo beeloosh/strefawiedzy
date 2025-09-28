@@ -97,12 +97,7 @@
     <!-- 🔥 Nowości -->
     <section aria-labelledby="news">
       <h2 id="news">🔥 Nowości</h2>
-      <ul class="news-list">
-        <li><a href="gry.html">🎲 Gry i quizy</a></li>
-        <li><a href="swoimi.html">✍️ Swoimi słowami</a></li>
-        <li><a href="ciekawostki.html">✨ Ciekawostki</a></li>
-        <li><a href="https://chatgpt.com/g/g-68a339374c048191862849c00083f0c5-pomocnik-cyfrowy-dla-kazdego" target="_blank" rel="noopener">🤖 AI – zaprzyjaźnij się</a></li>
-      </ul>
+      <ul id="news-list" class="news-list"></ul>
     </section>
 
     <!-- 📚 Główne kafelki -->
@@ -139,5 +134,29 @@
   <footer>
     <p>© 2025 Strefa Wiedzy. Projekt edukacyjny.</p>
   </footer>
+
+  <script>
+    // 🔧 Skrypt generujący "Nowości" z kafelków
+    document.addEventListener("DOMContentLoaded", () => {
+      const newsList = document.getElementById("news-list");
+      const tiles = document.querySelectorAll(".tile");
+      tiles.forEach(tile => {
+        const title = tile.querySelector("h3")?.innerText || "Nowość";
+        const link = tile.querySelector("a.stretched")?.getAttribute("href");
+        if (link) {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = link;
+          a.textContent = title;
+          if (link.startsWith("http")) {
+            a.target = "_blank";
+            a.rel = "noopener";
+          }
+          li.appendChild(a);
+          newsList.appendChild(li);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
