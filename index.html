@@ -3,184 +3,145 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>📚 Strefa Wiedzy – Mazowsze 55+</title>
+  <title>🎓 Strefa Wiedzy</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin:0; background:#f9fafb; color:#111; }
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
     header {
-      background:#3BA6E6;
-      color:#fff;
-      padding:1rem 2rem;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
+      background: #0052a5;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-    header h1 { margin:0; font-size:1.2rem; font-weight:600; }
-    header .actions { display:flex; gap:.5rem; }
-    header .actions a {
-      background:#fff;
-      color:#333;
-      padding:.4rem .8rem;
-      border-radius:6px;
-      text-decoration:none;
-      font-size:.9rem;
+    h1 {
+      margin: 0;
     }
-
-    main { max-width:1200px; margin:auto; padding:2rem 1rem; }
-    h2 { margin:1rem 0; font-size:1.2rem; font-weight:600; display:flex; align-items:center; gap:.5rem; }
-
-    section { margin-bottom:2.5rem; }
-    .tiles { display:grid; gap:1rem; }
+    nav {
+      background: #00adef;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .section h2 {
+      color: #0052a5;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
     .tile {
-      background:#fff;
-      border:1px solid #ddd;
-      border-radius:12px;
-      padding:1rem;
-      position:relative;
-      transition:.2s;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
     }
-    .tile:hover { box-shadow:0 4px 10px rgba(0,0,0,.08); transform:translateY(-2px); }
-    .tile h3 { margin:.2rem 0; font-size:1rem; font-weight:600; position:relative; z-index:1; }
-    .tile p { margin:.3rem 0 0; font-size:.9rem; color:#444; position:relative; z-index:1; }
-    .tile a.stretched { position:absolute; inset:0; z-index:2; }
-    .badge { display:inline-block; background:#fef2c0; border-radius:6px; padding:.2rem .5rem; font-size:.8rem; margin-bottom:.3rem; }
-
-    /* układy sekcji */
-    #news .tiles { grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); }
-    #fun .tiles { grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); }
-    #topics .tiles { grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); }
-
-    a.button-link {
-      display:inline-block;
-      margin-top:.6rem;
-      background:#3BA6E6;
-      color:#fff;
-      padding:.4rem .8rem;
-      border-radius:6px;
-      text-decoration:none;
-      font-size:.9rem;
+    .tile:hover {
+      transform: scale(1.02);
+    }
+    .tile img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .tile h3 {
+      margin: 12px;
+      color: #007bbd;
+    }
+    .tile p {
+      margin: 0 12px 12px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>📚 Strefa Wiedzy – Mazowsze 55+</h1>
-    <div class="actions">
-      <a href="szukaj.html">🔍 Szukaj</a>
-      <a href="slowniczek.html">📘 Słowniczek</a>
-    </div>
+    <h1>🎓 Strefa Wiedzy</h1>
+    <p>Twoje miejsce odkrywania technologii i pasji</p>
   </header>
 
-  <main>
-    <!-- 📝 Słówko dnia -->
-    <section aria-labelledby="word">
-      <h2 id="word">📝 Słówko dnia</h2>
+  <nav>
+    <a href="#nowosci">Nowości</a>
+    <a href="#poradniki">Poradniki</a>
+    <a href="#pasje">Pasje</a>
+  </nav>
+
+  <!-- Sekcja Nowości -->
+  <div class="section" id="nowosci">
+    <h2>🆕 Nowości</h2>
+    <div class="tiles">
       <div class="tile">
-        <span class="badge">Powiadomienie</span>
-        <p>Krótka wiadomość, która wyświetla się na ekranie telefonu.</p>
-        <a class="stretched" href="slowko.html"></a>
+        <a href="quiz-emoji.html">
+          <img src="img/emoji-quiz.png" alt="Quiz o emoji">
+          <h3>Quiz o emoji</h3>
+          <p>Sprawdź swoją znajomość emoji – dopasuj emotki do ich znaczeń i zobacz, ile wiesz o cyfrowym języku obrazków!</p>
+        </a>
       </div>
-      <a class="button-link" href="slowko-powiadomienie.html">📂 Zobacz archiwum słówek</a>
-    </section>
+      <!-- Możesz dodać kolejne nowości tutaj -->
+    </div>
+  </div>
 
-    <!-- 🆕 Nowości -->
-    <section id="news" aria-labelledby="news-title">
-      <h2 id="news-title">🆕 Nowości</h2>
-      <div class="tiles">
-        <article class="tile">
-          <h3>📑 Nowy poradnik o płatnościach</h3>
-          <p>Dowiedz się, jak korzystać z BLIK i karty w smartfonie.</p>
-          <a class="stretched" href="ciekawostka-email.html"></a>
-        </article>
-        <article class="tile">
-          <h3>🔒 Bezpieczne rozmowy online</h3>
-          <p>Udostępnianie ekranu w WhatsApp i Messengerze.</p>
-          <a class="stretched" href="ciekawostka-wifi.html"></a>
-        </article>
-        <article class="tile">
-          <h3>📲 Aplikacja mObywatel</h3>
-          <p>Twoje dokumenty w telefonie.</p>
-          <a class="stretched" href="mobywatel.html"></a>
-        </article>
+  <!-- Sekcja Poradniki -->
+  <div class="section" id="poradniki">
+    <h2>📘 Poradniki</h2>
+    <div class="tiles">
+      <!-- Inne poradniki -->
+      <div class="tile">
+        <a href="google-arts-zagraj.html">
+          <img src="img/google-arts.png" alt="Poradnik Google Arts & Culture">
+          <h3>Poradnik Google Arts & Culture</h3>
+          <p>Dowiedz się, jak korzystać z Google Arts & Culture, odkrywaj sztukę, graj w Pet Portraits, Puzzle Party i inne zabawy. 
+          Zmień język na polski i baw się sztuką online!</p>
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- 🎲 Rozrywka i ciekawostki -->
-    <section id="fun" aria-labelledby="fun-title">
-      <h2 id="fun-title">🎲 Rozrywka i ciekawostki</h2>
-      <div class="tiles">
-        <article class="tile">
-          <h3>🎲 Gry i zabawy</h3>
-          <p>Krzyżówki i quizy na pamięć.</p>
-          <a class="stretched" href="gry.html"></a>
-        </article>
-        <article class="tile">
-          <h3>✍️ Swoimi słowami</h3>
-          <p>Podziel się własnym doświadczeniem.</p>
-          <a class="stretched" href="swoimi.html"></a>
-        </article>
-        <article class="tile">
-          <h3>✨ Ciekawostki</h3>
-          <p>Krótkie informacje i porady ze świata cyfrowego.</p>
-          <a class="stretched" href="ciekawostki.html"></a>
-        </article>
-        <article class="tile">
-          <h3>🤖 AI – zaprzyjaźnij się</h3>
-          <p>Poznaj sztuczną inteligencję.</p>
-          <a class="stretched" 
-             href="https://chat.openai.com/g/g-68a339374c048191862849c00083f0c5-pomocnik-cyfrowy-dla-kazdego" 
-             target="_blank" 
-             rel="noopener noreferrer"></a>
-        </article>
+  <!-- Sekcja Pasje -->
+  <div class="section" id="pasje">
+    <h2>💡 Pasje</h2>
+    <div class="tiles">
+      <div class="tile">
+        <a href="gry.html">
+          <img src="img/gry.png" alt="Gry i zabawy online">
+          <h3>Gry i zabawy</h3>
+          <p>Rozwijaj swoją kreatywność i baw się w interaktywne gry edukacyjne oraz quizy w Strefie Wiedzy.</p>
+        </a>
       </div>
-    </section>
+      <!-- Tu można dodać kolejne pasje -->
+    </div>
+  </div>
 
-    <!-- 📂 Działy tematyczne -->
-    <section id="topics" aria-labelledby="topics-title">
-      <h2 id="topics-title">📂 Działy tematyczne</h2>
-      <div class="tiles">
-        <article class="tile">
-          <h3>📱 1 smartfon = 100 możliwości</h3>
-          <p>Poradniki krok po kroku.</p>
-          <a class="stretched" href="smartfon.html"></a>
-        </article>
+  <footer>
+    &copy; 2025 Strefa Wiedzy – Projekt edukacyjny
+  </footer>
 
-        <article class="tile">
-          <h3>💬 Bliżej – rozmawiaj online</h3>
-          <p>WhatsApp, Messenger – wideo i udostępnianie ekranu.</p>
-          <a class="stretched" href="#"></a>
-        </article>
-
-        <article class="tile">
-          <h3>💰 Pieniądze – zakupy, opłaty, usługi</h3>
-          <p>Płatności, bankowość, zakupy online.</p>
-          <a class="stretched" href="pieniadze.html"></a>
-        </article>
-
-        <article class="tile">
-          <h3>🏥 Zdrowie – lekarz, recepty, skierowania</h3>
-          <p>Jak sprawdzić e-recepty i umówić wizytę.</p>
-          <a class="stretched" href="zdrowie.html"></a>
-        </article>
-
-        <article class="tile">
-          <h3>🏛️ Urząd – sprawy obywatelskie</h3>
-          <p>Załatwianie spraw urzędowych online.</p>
-          <a class="stretched" href="urzad.html"></a>
-        </article>
-
-        <article class="tile">
-          <h3>🚨 Alert! Oszustwo</h3>
-          <p>Najczęstsze triki i jak się bronić.</p>
-          <a class="stretched" href="oszustwo.html"></a>
-        </article>
-
-        <article class="tile">
-          <h3>🌸 Pasje – hobby, rozrywka, kreatywność</h3>
-          <p>Rozwijaj zainteresowania i korzystaj z kultury online.</p>
-          <a class="stretched" href="pasje.html"></a>
-        </article>
-      </div>
-    </section>
-  </main>
 </body>
 </html>
