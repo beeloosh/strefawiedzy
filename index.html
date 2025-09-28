@@ -5,96 +5,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>📚 Strefa Wiedzy</title>
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background:#f9f9f9;
-      margin:0; padding:1rem;
-      line-height:1.6; color:#444;
+    :root{
+      --brand:#26295C;
+      --acc:#56AFE3;
+      --bg:#f7f7fa;
+      --card:#fff;
+      --muted:#6b7280;
+      --shadow:0 2px 6px rgba(0,0,0,.1);
+      --radius:16px;
     }
-    header {
-      text-align:center; margin:1.5rem 0;
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background:var(--bg); color:#444; margin:0; padding:0;
+      line-height:1.6;
     }
-    header h1 {
-      color:#26295C; margin-bottom:.3rem;
+    header{ text-align:center; padding:24px 16px 12px }
+    header h1{ color:var(--brand); margin:.2rem 0 }
+    header p{ color:var(--muted); margin:0 0 .6rem }
+    nav{ text-align:center; margin:.4rem 0 1.2rem }
+    nav a{
+      display:inline-block; margin:0 .6rem; text-decoration:none;
+      color:var(--acc); font-weight:600;
     }
-    nav {
-      margin:1rem 0; text-align:center;
-    }
-    nav a {
-      margin:0 .6rem;
-      color:#56AFE3; font-weight:600; text-decoration:none;
-    }
-    nav a:hover { text-decoration:underline; }
+    nav a:hover{ text-decoration:underline }
 
-    section {
-      max-width:900px; margin:2rem auto;
-      background:#fff; padding:1.5rem 2rem;
-      border-radius:16px;
-      box-shadow:0 2px 6px rgba(0,0,0,.1);
+    .section{
+      max-width:1100px; margin: 0 auto 32px; padding: 16px;
     }
-    h2 { color:#26295C; margin-top:0; }
-    h3 { margin:.8rem 0 .4rem; }
-    .news-item {
-      margin-bottom:1.2rem; padding-bottom:.8rem;
-      border-bottom:1px solid #eee;
+    .panel{
+      background:var(--card); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:18px 18px 8px;
     }
-    .news-item:last-child { border:none; }
-    .news-item a {
-      color:#56AFE3; font-weight:600; text-decoration:none;
+    .panel h2{
+      color:var(--brand); margin:0 0 12px; display:flex; align-items:center; gap:.5rem;
+      font-size:1.5rem;
     }
-    .news-item a:hover { text-decoration:underline; }
+    .badge{
+      display:inline-flex; align-items:center; gap:.35rem;
+      font-size:.85rem; background:#e9f3ff; color:#1e60a8;
+      padding:.2rem .5rem; border-radius:.5rem; font-weight:700;
+    }
+    .grid{
+      display:grid; gap:22px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      padding:10px 6px 18px;
+    }
+    .card{
+      background:var(--card); border-radius:14px; box-shadow:var(--shadow);
+      padding:16px; display:flex; flex-direction:column; min-height:190px;
+    }
+    .card h3{ color:var(--brand); margin:.2rem 0 .4rem; font-size:1.15rem }
+    .card p{ margin:0 0 1rem; color:#555 }
+    .btn{
+      margin-top:auto; align-self:flex-start;
+      background:var(--acc); color:#fff; text-decoration:none;
+      padding:.65rem 1rem; border-radius:.7rem; font-weight:700;
+    }
+    .btn:hover{ filter:brightness(1.05) }
+    .meta{
+      display:flex; align-items:center; gap:.4rem; color:var(--muted);
+      font-size:.9rem; margin:.2rem 0 .8rem
+    }
+    footer{ text-align:center; color:var(--muted); padding:24px 0 40px }
+    /* fallback dla bardzo wąskich ekranów */
+    @media (max-width:360px){
+      .grid{ grid-template-columns:1fr }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>📚 Strefa Wiedzy</h1>
     <p>Twoje centrum nauki i inspiracji</p>
+    <nav>
+      <a href="index.html">Strona główna</a>
+      <a href="gry.html">Gry i quizy</a>
+      <a href="poradniki.html">Poradniki</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Strona główna</a>
-    <a href="gry.html">Gry i quizy</a>
-    <a href="poradniki.html">Poradniki</a>
-  </nav>
+  <main class="section">
+    <section class="panel" aria-labelledby="nowosci-heading">
+      <h2 id="nowosci-heading"><span class="badge">NEW</span> Nowości</h2>
 
-  <section id="nowosci">
-    <h2>🆕 Nowości</h2>
-    <div id="news-list">
-      <p>Ładowanie nowości...</p>
-    </div>
-  </section>
+      <!-- Siatka kafelków z nowościami -->
+      <div class="grid" id="news-grid">
+        <!-- Fallback (zniknie po wczytaniu JSON): -->
+        <div class="card" aria-live="polite">
+          <h3>Ładowanie nowości…</h3>
+          <p>Za chwilę zobaczysz najnowsze kafelki.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer style="text-align:center; margin:2rem 0; color:#777;">
-    <p>© 2025 Strefa Wiedzy</p>
-  </footer>
+  <footer>© 2025 Strefa Wiedzy</footer>
 
   <script>
-  // Wczytywanie nowości z pliku nowosci.json
-  fetch("nowosci.json")
-    .then(res => {
-      if (!res.ok) throw new Error("Błąd sieci");
-      return res.json();
-    })
-    .then(data => {
-      const newsList = document.getElementById("news-list");
-      newsList.innerHTML = ""; // czyścimy "Ładowanie..."
-      data.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "news-item";
-        div.innerHTML = `
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
-          <a href="${item.link}" target="_blank" rel="noopener">🔗 Zobacz</a>
-        `;
-        newsList.appendChild(div);
+    // Render nowości jako KAFELKI z pliku nowosci.json
+    fetch("nowosci.json", {cache:"no-store"})
+      .then(r => {
+        if(!r.ok) throw new Error("HTTP "+r.status);
+        return r.json();
+      })
+      .then(list => {
+        const grid = document.getElementById("news-grid");
+        grid.innerHTML = ""; // usuń fallback
+
+        // Posortuj malejąco po dacie, jeśli jest (ISO string); w przeciwnym razie kolejność z pliku
+        try{
+          list.sort((a,b)=>{
+            const da = Date.parse(a.date || 0);
+            const db = Date.parse(b.date || 0);
+            return isNaN(db)-isNaN(da) || db - da;
+          });
+        }catch(_){}
+
+        list.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          const isExternal = /^https?:\/\//i.test(item.link || "");
+          const title = item.title || "Nowość";
+          const desc  = item.desc  || "";
+          const btn   = item.button || "Zobacz";
+          const link  = item.link || "#";
+
+          card.innerHTML = `
+            <h3>${title}</h3>
+            ${desc ? `<p>${desc}</p>` : ``}
+            <div class="meta">${isExternal ? "🔗" : "📄"} ${item.source || (isExternal ? "Strona zewnętrzna" : "Wewnątrz Strefy")}</div>
+            <a class="btn" href="${link}" ${isExternal ? 'target="_blank" rel="noopener"' : ""}>${btn}</a>
+          `;
+          grid.appendChild(card);
+        });
+
+        if(!grid.children.length){
+          grid.innerHTML = `
+            <div class="card">
+              <h3>Brak nowości</h3>
+              <p>Dodaj wpisy do <code>nowosci.json</code>, aby pojawiły się tutaj jako kafelki.</p>
+            </div>`;
+        }
+      })
+      .catch(err => {
+        const grid = document.getElementById("news-grid");
+        grid.innerHTML = `
+          <div class="card">
+            <h3>Nie udało się wczytać nowości</h3>
+            <p style="color:#b42318">Sprawdź plik <code>nowosci.json</code> (poprawny JSON, dostępny pod tym samym adresem).</p>
+          </div>`;
+        console.error(err);
       });
-    })
-    .catch(err => {
-      document.getElementById("news-list").innerHTML =
-        "<p style='color:red'>Nie udało się wczytać nowości.</p>";
-      console.error(err);
-    });
   </script>
 </body>
 </html>
