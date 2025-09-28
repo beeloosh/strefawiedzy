@@ -5,32 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>📖 Archiwum – Słówko dnia</title>
   <style>
-    body {margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;line-height:1.6;max-width:900px;margin:auto;padding:1rem;background:#f9f9f9;}
-    h1,h2 {color:#26295C;}
-    details {margin:.5rem 0;padding:.5rem 1rem;border:1px solid #ddd;border-radius:.6rem;background:#fff;}
-    summary {cursor:pointer;font-weight:bold;}
-    a {display:inline-block;margin-top:1rem;color:#56AFE3;text-decoration:none;font-weight:bold;}
+    body {
+      margin:0;
+      font-family:system-ui,Segoe UI,Roboto,Arial;
+      line-height:1.6;
+      max-width:900px;
+      margin:auto;
+      padding:1rem;
+      background:#f9f9f9;
+    }
+    h1 {color:#26295C;text-align:center;}
+    p.note {text-align:center;color:#666;}
+    details {
+      margin:.5rem 0;
+      padding:.5rem 1rem;
+      border:1px solid #ddd;
+      border-radius:.6rem;
+      background:#fff;
+    }
+    summary {
+      cursor:pointer;
+      font-weight:bold;
+    }
+    details p {
+      margin:.3rem 0;
+    }
+    details a {
+      display:inline-block;
+      margin-top:.3rem;
+      color:#56AFE3;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    details a:hover { text-decoration:underline; }
+    a.back {
+      display:block;
+      margin:2rem auto 0;
+      text-align:center;
+      color:#56AFE3;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    a.back:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
   <h1>📖 Archiwum – Słówko dnia</h1>
-  <p>Tutaj znajdziesz wszystkie pojęcia cyfrowe wyjaśnione prostym językiem.</p>
+  <p class="note">Tutaj znajdziesz wszystkie pojęcia cyfrowe wyjaśnione prostym językiem. Kliknij, aby zobaczyć szczegóły lub przejść do pełnej strony.</p>
 
   <details>
     <summary>🔔 Powiadomienie</summary>
     <p>Krótka wiadomość, która wyskakuje na ekranie, np. SMS, przypomnienie.</p>
+    <a href="slowko-powiadomienie.html">➡️ Zobacz więcej</a>
   </details>
 
   <details>
     <summary>📶 Wi-Fi</summary>
     <p>Bezprzewodowy Internet w domu lub miejscu publicznym.</p>
+    <a href="slowko-wifi.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>📡 Cell Broadcast</summary>
+    <p>Specjalny komunikat alarmowy wysyłany na wszystkie telefony w danej okolicy.</p>
+    <a href="slowko-cellbroadcast.html">➡️ Zobacz więcej</a>
   </details>
 
   <details>
     <summary>💳 BLIK</summary>
     <p>Szybka płatność kodem jednorazowym z aplikacji bankowej.</p>
+    <a href="slowko-blik.html">➡️ Zobacz więcej</a>
   </details>
 
-  <a href="index.html">⬅️ Wróć do strony głównej</a>
+  <details>
+    <summary>🛡️ Profil Zaufany</summary>
+    <p>Bezpłatne narzędzie do potwierdzania tożsamości online w usługach publicznych.</p>
+    <a href="slowko-profilzaufany.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>🪪 mObywatel</summary>
+    <p>Aplikacja rządowa z dokumentami elektronicznymi i e-receptami.</p>
+    <a href="slowko-mobywatel.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>🛑 Oszustwo</summary>
+    <p>Fałszywe telefony, SMS-y, linki. Zasada: nie podawaj danych i kodów BLIK.</p>
+    <a href="slowko-oszustwo.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>👥 Udostępnianie ekranu</summary>
+    <p>Funkcja w WhatsApp/Messengerze. Używaj ostrożnie, nie pokazuj haseł ani bankowości.</p>
+    <a href="slowko-udostepnianie.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>🗺️ Mapy</summary>
+    <p>Aplikacja do sprawdzania trasy. Włączaj lokalizację tylko gdy potrzebna.</p>
+    <a href="slowko-mapy.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>🩺 e-Recepta</summary>
+    <p>Elektroniczna recepta widoczna w aplikacji IKP lub mObywatel.</p>
+    <a href="slowko-erecepta.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <details>
+    <summary>🤖 AI</summary>
+    <p>Sztuczna inteligencja — pomaga pisać i tłumaczyć, ale nie podawaj jej danych wrażliwych.</p>
+    <a href="slowko-ai.html">➡️ Zobacz więcej</a>
+  </details>
+
+  <a href="index.html" class="back">⬅️ Wróć do strony głównej</a>
 </body>
 </html>
