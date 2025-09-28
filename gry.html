@@ -45,7 +45,8 @@
   <a class="back" href="index.html">⬅️ Wróć do strony głównej</a>
   <p class="note">Kliknij w grę, aby otworzyć ją w nowej karcie i rozpocząć zabawę.</p>
 
-  <div class="grid">
+  <div class="grid" id="games-list">
+    <!-- Ręcznie wpisane gry -->
     <div class="card">
       <h2>🧩 What Came First? — Co było pierwsze?</h2>
       <p>Zgadnij, które wydarzenia, wynalazki i dzieła pojawiły się wcześniej.</p>
@@ -75,13 +76,27 @@
       <p>Rozpoznaj tytuły filmów na podstawie sekwencji emoji. Rozrywka i trening skojarzeń.</p>
       <a class="btn" href="https://www.britannica.com/quiz/guess-the-movie-emoji-quiz" target="_blank" rel="noopener">🍿 Zagraj w quiz</a>
     </div>
-
-    <div class="card">
-      <h2>⚗️ Little Alchemy</h2>
-      <p>Łącz różne elementy i odkrywaj nowe obiekty. Zacznij od ognia, wody, powietrza i ziemi, a potem twórz coraz bardziej złożone rzeczy.</p>
-      <a class="btn" href="https://littlealchemy.com/" target="_blank" rel="noopener">🌍 Zagraj online</a>
-    </div>
   </div>
+
+  <script>
+  // Dociąganie dodatkowych gier z pliku gry.json
+  fetch("gry.json")
+    .then(res => res.json())
+    .then(data => {
+      const gamesList = document.getElementById("games-list");
+      data.forEach(game => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h2>${game.title}</h2>
+          <p>${game.desc}</p>
+          <a class="btn" href="${game.link}" target="_blank" rel="noopener">${game.button}</a>
+        `;
+        gamesList.appendChild(card);
+      });
+    })
+    .catch(err => console.error("Błąd wczytywania gier:", err));
+  </script>
 
 </body>
 </html>
