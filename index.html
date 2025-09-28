@@ -18,10 +18,26 @@
       padding: 1.5rem;
       text-align: center;
     }
-    h1 { margin: 0; font-size: 1.8rem; }
+    header h1 { margin: 0; font-size: 2rem; }
+    header p { margin: 0.5rem 0 0; }
+
+    nav {
+      background: #00ADEF;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
     main { padding: 2rem 1rem; max-width: 1200px; margin: auto; }
     section { margin-bottom: 3rem; }
     h2 { margin-bottom: 1rem; font-size: 1.4rem; }
+
     .tiles {
       display: grid;
       gap: 1rem;
@@ -34,18 +50,33 @@
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,.06);
       overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
     }
     .tile h3 { margin-top: 0; }
+    .tile p { margin-bottom: 0.5rem; }
     .stretched {
       position: absolute;
       inset: 0;
       z-index: 1;
     }
+
     /* Nowości */
     .news-list { list-style: none; margin: 0; padding: 0; }
     .news-list li { margin-bottom: .5rem; }
     .news-list a { text-decoration: none; color: #0052A5; }
     .news-list a:hover { text-decoration: underline; }
+
+    footer {
+      background: #0052A5;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -53,6 +84,15 @@
     <h1>📚 Strefa Wiedzy</h1>
     <p>Twoje miejsce na naukę, ciekawostki i rozrywkę</p>
   </header>
+
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="gry.html">Gry</a>
+    <a href="ciekawostki.html">Ciekawostki</a>
+    <a href="swoimi.html">Swoimi słowami</a>
+    <a href="https://chatgpt.com/g/g-68a339374c048191862849c00083f0c5-pomocnik-cyfrowy-dla-kazdego" target="_blank" rel="noopener">AI</a>
+  </nav>
+
   <main>
     <!-- 🔥 Nowości -->
     <section aria-labelledby="news">
@@ -71,29 +111,33 @@
       <div class="tiles">
         <article class="tile">
           <h3>🎲 Gry i zabawy</h3>
-          <p>Krzyżówki i quizy na pamięć.</p>
+          <p>Krzyżówki, quizy i interaktywne gry edukacyjne.</p>
           <a class="stretched" href="gry.html" aria-label="Przejdź do: Gry i zabawy"></a>
         </article>
 
         <article class="tile">
           <h3>✍️ Swoimi słowami</h3>
-          <p>Podziel się własnym doświadczeniem.</p>
+          <p>Podziel się swoimi doświadczeniami i opiniami.</p>
           <a class="stretched" href="swoimi.html" aria-label="Przejdź do: Swoimi słowami"></a>
         </article>
 
         <article class="tile">
           <h3>✨ Ciekawostki</h3>
-          <p>Cyfrowe fakty i porady.</p>
+          <p>Cyfrowe fakty, porady i niespodzianki.</p>
           <a class="stretched" href="ciekawostki.html" aria-label="Przejdź do: Ciekawostki"></a>
         </article>
 
         <article class="tile">
           <h3>🤖 AI – zaprzyjaźnij się</h3>
-          <p>Poznaj sztuczną inteligencję.</p>
+          <p>Poznaj świat sztucznej inteligencji i zobacz, jak działa.</p>
           <a class="stretched" href="https://chatgpt.com/g/g-68a339374c048191862849c00083f0c5-pomocnik-cyfrowy-dla-kazdego" target="_blank" rel="noopener" aria-label="Otwórz: AI – zaprzyjaźnij się (nowe okno)"></a>
         </article>
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>© 2025 Strefa Wiedzy. Projekt edukacyjny.</p>
+  </footer>
 </body>
 </html>
