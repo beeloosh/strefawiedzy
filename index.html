@@ -39,9 +39,9 @@
       transition:.2s;
     }
     .tile:hover { box-shadow:0 4px 10px rgba(0,0,0,.08); transform:translateY(-2px); }
-    .tile h3 { margin:.2rem 0; font-size:1rem; font-weight:600; }
-    .tile p { margin:.3rem 0 0; font-size:.9rem; color:#444; }
-    .tile a.stretched { position:absolute; inset:0; z-index:1; }
+    .tile h3 { margin:.2rem 0; font-size:1rem; font-weight:600; position:relative; z-index:1; }
+    .tile p { margin:.3rem 0 0; font-size:.9rem; color:#444; position:relative; z-index:1; }
+    .tile a.stretched { position:absolute; inset:0; z-index:2; }
     .badge { display:inline-block; background:#fef2c0; border-radius:6px; padding:.2rem .5rem; font-size:.8rem; margin-bottom:.3rem; }
 
     /* układy sekcji */
@@ -123,59 +123,18 @@
           <p>Krótkie informacje i porady ze świata cyfrowego.</p>
           <a class="stretched" href="ciekawostki.html"></a>
         </article>
-       <article class="tile">
-  <h3>🤖 AI – zaprzyjaźnij się</h3>
-  <p>Poznaj sztuczną inteligencję.</p>
-  <a class="stretched" 
-     href="https://chatgpt.com/g/g-68a339374c048191862849c00083f0c5-pomocnik-cyfrowy-dla-kazdego" 
-     target="_blank" rel="noopener"></a>
-</article>
+        <article class="tile">
+          <h3>🤖 AI – zaprzyjaźnij się</h3>
+          <p>Poznaj sztuczną inteligencję.</p>
+          <a class="stretched" href="ai.html"></a>
+        </article>
       </div>
     </section>
 
-  <section id="topics" aria-labelledby="topics-title">
-  <h2 id="topics-title">📂 Działy tematyczne</h2>
-  <div class="tiles">
-    <article class="tile">
-      <h3>📱 1 smartfon = 100 możliwości</h3>
-      <p>Poradniki krok po kroku.</p>
-      <a class="stretched" href="smartfon.html"></a>
-    </article>
-
-    <article class="tile">
-      <h3>💬 Bliżej – rozmawiaj online</h3>
-      <p>WhatsApp, Messenger – wideo i udostępnianie ekranu.</p>
-      <a class="stretched" href="#"></a>
-    </article>
-
-    <article class="tile">
-      <h3>💰 Pieniądze – zakupy, opłaty, usługi</h3>
-      <p>Płatności, bankowość, zakupy online.</p>
-      <a class="stretched" href="#"></a>
-    </article>
-
-    <article class="tile">
-      <h3>🏥 Zdrowie – lekarz, recepty, skierowania</h3>
-      <p>Jak sprawdzić e-recepty i umówić wizytę.</p>
-      <a class="stretched" href="#"></a>
-    </article>
-
-    <article class="tile">
-      <h3>🏛️ Urząd – sprawy obywatelskie</h3>
-      <p>Załatwianie spraw urzędowych online.</p>
-      <a class="stretched" href="#"></a>
-    </article>
-
-    <article class="tile">
-      <h3>🚨 Alert! Oszustwo</h3>
-      <p>Najczęstsze triki i jak się bronić.</p>
-      <a class="stretched" href="#"></a>
-    </article>
-
-    <article class="tile">
-      <h3>🌸 Pasje – hobby, rozrywka, kreatywność</h3>
-      <p>Rozwijaj zainteresowania i korzystaj z kultury online.</p>
-      <a class="stretched" href="pasje.html"></a>
-    </article>
-  </div>
-</section>
+    <!-- 📂 Działy tematyczne -->
+    <section id="topics" aria-labelledby="topics-title">
+      <h2 id="topics-title">📂 Działy tematyczne</h2>
+      <div class="tiles">
+        <article class="tile">
+          <h3>📱 1 smartfon = 100 możliwości</h3>
+          <p>Poradn
