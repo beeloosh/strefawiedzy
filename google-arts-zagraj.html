@@ -1,30 +1,68 @@
 <!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Poradnik Google Arts & Culture – Strefa Wiedzy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poradnik Google Arts & Culture — Strefa Wiedzy</title>
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #0052a5;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-    }
-    nav {
-      background: #00adef;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: n
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;line-height:1.6;background:#f9f9f9;color:#333}
+    header{background:#56AFE3;color:#fff;padding:1rem;display:flex;justify-content:space-between;align-items:center}
+    header h1{margin:0;font-size:1.2rem}
+    a.btn{background:#fff;color:#26295C;padding:.5rem 1rem;border-radius:.6rem;text-decoration:none;font-weight:bold}
+    .section{padding:1rem;max-width:1100px;margin:0 auto}
+    h2{color:#26295C;margin:.5rem 0 1rem}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+    .card{background:#fff;border:1px solid #ddd;border-radius:1rem;overflow:hidden}
+    .card img{width:100%;height:200px;object-fit:cover}
+    .card .content{padding:1rem}
+    .cta{display:inline-block;margin-top:.5rem;background:#00adef;color:#fff;padding:.5rem .9rem;border-radius:.6rem;text-decoration:none;font-weight:700}
+    .back{margin:1rem 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎨 Poradnik Google Arts & Culture</h1>
+    <a class="btn" href="index.html">← Wróć do Strefy Wiedzy</a>
+  </header>
+
+  <main class="section">
+    <h2>Jak zacząć</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="assets/google-arts.png" alt="Ekran Google Arts & Culture">
+        <div class="content">
+          <h3>Co to jest?</h3>
+          <p>Wirtualne muzeum: dzieła sztuki, wystawy, zwiedzanie i zabawy interaktywne — wszystko za darmo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/smartfon-poster.png" alt="Przykład powiększonego obrazu">
+        <div class="content">
+          <h3>Oglądanie dzieł</h3>
+          <p>Kliknij obraz, przybliżaj i przesuwaj, aby obejrzeć szczegóły; pod spodem znajdziesz opis i autora.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/smartfon-sos-story.gif" alt="Gry w Google Arts & Culture">
+        <div class="content">
+          <h3>Gry i zabawy</h3>
+          <p>Wejdź do sekcji <strong>Zagraj</strong>: Puzzle Party, Pet Portraits i inne proste, sympatyczne aktywności.</p>
+          <a class="cta" href="https://artsandculture.google.com/play" target="_blank" rel="noopener">Przejdź do gier 🎮</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/google-arts.png" alt="Ustawienia języka">
+        <div class="content">
+          <h3>Ustaw język polski</h3>
+          <p>Menu (trzy kreski) → przewiń na dół → <em>Language/Język</em> → <strong>Polski</strong>.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="back"><a class="btn" href="index.html">← Wróć do Strefy Wiedzy</a></p>
+  </main>
+</body>
+</html>
