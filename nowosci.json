@@ -1,17 +1,26 @@
 [
   {
-    "title": "⚗️ Little Alchemy",
+    "title": "🧪 Little Alchemy",
     "desc": "Łącz różne elementy i odkrywaj nowe obiekty.",
-    "link": "https://littlealchemy.com/"
+    "link": "https://littlealchemy.com/",
+    "button": "🌍 Zobacz",
+    "source": "Strona zewnętrzna",
+    "date": "2025-09-28"
   },
   {
     "title": "🎬 Emoji Movie Quiz",
     "desc": "Rozpoznaj tytuły filmów na podstawie sekwencji emoji.",
-    "link": "https://www.britannica.com/quiz/guess-the-movie-emoji-quiz"
+    "link": "https://www.britannica.com/quiz/guess-the-movie-emoji-quiz",
+    "button": "🍿 Zobacz",
+    "source": "Strona zewnętrzna",
+    "date": "2025-09-27"
   },
   {
     "title": "📲 Aplikacja mObywatel",
     "desc": "Twoje dokumenty w telefonie.",
-    "link": "https://www.gov.pl/web/mobywatel"
+    "link": "https://www.gov.pl/web/mobywatel",
+    "button": "🔗 Zobacz",
+    "source": "Gov.pl",
+    "date": "2025-09-20"
   }
 ]
