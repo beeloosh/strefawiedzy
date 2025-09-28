@@ -6,28 +6,67 @@
   <title>📚 Strefa Wiedzy – Mazowsze 55+</title>
   <style>
     body { font-family: system-ui, sans-serif; margin:0; background:#f9fafb; color:#111; }
-    header { background:#3498db; color:#fff; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
-    header h1 { margin:0; font-size:1.4rem; }
+    header {
+      background:#3BA6E6;
+      color:#fff;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    header h1 { margin:0; font-size:1.2rem; font-weight:600; }
     header .actions { display:flex; gap:.5rem; }
-    header .actions a { background:#fff; color:#333; padding:.4rem .8rem; border-radius:6px; text-decoration:none; font-size:.9rem; }
+    header .actions a {
+      background:#fff;
+      color:#333;
+      padding:.4rem .8rem;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:.9rem;
+    }
+
     main { max-width:1200px; margin:auto; padding:2rem 1rem; }
-    h2 { margin:1rem 0; font-size:1.3rem; }
+    h2 { margin:1rem 0; font-size:1.2rem; font-weight:600; display:flex; align-items:center; gap:.5rem; }
+
     section { margin-bottom:2.5rem; }
-    .tiles { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); }
-    .tile { background:#fff; border:1px solid #ddd; border-radius:12px; padding:1rem; position:relative; transition:.2s; }
-    .tile:hover { box-shadow:0 4px 10px rgba(0,0,0,.08); transform:translateY(-3px); }
-    .tile h3 { margin:.2rem 0; font-size:1.05rem; }
+    .tiles { display:grid; gap:1rem; }
+    .tile {
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:12px;
+      padding:1rem;
+      position:relative;
+      transition:.2s;
+    }
+    .tile:hover { box-shadow:0 4px 10px rgba(0,0,0,.08); transform:translateY(-2px); }
+    .tile h3 { margin:.2rem 0; font-size:1rem; font-weight:600; }
     .tile p { margin:.3rem 0 0; font-size:.9rem; color:#444; }
     .tile a.stretched { position:absolute; inset:0; z-index:1; }
-    .badge { display:inline-block; background:#eee; border-radius:6px; padding:.2rem .5rem; font-size:.8rem; margin-bottom:.3rem; }
+    .badge { display:inline-block; background:#fef2c0; border-radius:6px; padding:.2rem .5rem; font-size:.8rem; margin-bottom:.3rem; }
+
+    /* układy sekcji */
+    #news .tiles { grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); }
+    #fun .tiles { grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); }
+    #topics .tiles { grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); }
+
+    a.button-link {
+      display:inline-block;
+      margin-top:.6rem;
+      background:#3BA6E6;
+      color:#fff;
+      padding:.4rem .8rem;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>📚 Strefa Wiedzy – Mazowsze 55+</h1>
     <div class="actions">
-      <a href="search.html">🔍 Szukaj</a>
-      <a href="slowniczek.html">📘 Słowniczek</a>
+      <a href="#">🔍 Szukaj</a>
+      <a href="#">📘 Słowniczek</a>
     </div>
   </header>
 
@@ -38,24 +77,24 @@
       <div class="tile">
         <span class="badge">Powiadomienie</span>
         <p>Krótka wiadomość, która wyświetla się na ekranie telefonu.</p>
-        <a class="stretched" href="slowko.html" aria-label="Zobacz Słówko dnia"></a>
+        <a class="stretched" href="slowko.html"></a>
       </div>
-      <p><a href="archiwum-slowek.html">📂 Zobacz archiwum słówek</a></p>
+      <a class="button-link" href="slowko-powiadomienie.html">📂 Zobacz archiwum słówek</a>
     </section>
 
     <!-- 🆕 Nowości -->
-    <section aria-labelledby="news">
-      <h2 id="news">🆕 Nowości</h2>
+    <section id="news" aria-labelledby="news-title">
+      <h2 id="news-title">🆕 Nowości</h2>
       <div class="tiles">
         <article class="tile">
           <h3>📑 Nowy poradnik o płatnościach</h3>
           <p>Dowiedz się, jak korzystać z BLIK i karty w smartfonie.</p>
-          <a class="stretched" href="platnosci.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>🔒 Bezpieczne rozmowy online</h3>
           <p>Udostępnianie ekranu w WhatsApp i Messengerze.</p>
-          <a class="stretched" href="rozmowy.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>📲 Aplikacja mObywatel</h3>
@@ -66,8 +105,8 @@
     </section>
 
     <!-- 🎲 Rozrywka i ciekawostki -->
-    <section aria-labelledby="fun">
-      <h2 id="fun">🎲 Rozrywka i ciekawostki</h2>
+    <section id="fun" aria-labelledby="fun-title">
+      <h2 id="fun-title">🎲 Rozrywka i ciekawostki</h2>
       <div class="tiles">
         <article class="tile">
           <h3>🎲 Gry i zabawy</h3>
@@ -87,14 +126,14 @@
         <article class="tile">
           <h3>🤖 AI – zaprzyjaźnij się</h3>
           <p>Poznaj sztuczną inteligencję.</p>
-          <a class="stretched" href="ai.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
       </div>
     </section>
 
     <!-- 📂 Działy tematyczne -->
-    <section aria-labelledby="topics">
-      <h2 id="topics">📂 Działy tematyczne</h2>
+    <section id="topics" aria-labelledby="topics-title">
+      <h2 id="topics-title">📂 Działy tematyczne</h2>
       <div class="tiles">
         <article class="tile">
           <h3>📱 1 smartfon = 100 możliwości</h3>
@@ -103,33 +142,33 @@
         </article>
         <article class="tile">
           <h3>💬 Bliżej – rozmawiaj online</h3>
-          <p>WhatsApp, Messenger – wideło i udostępnianie ekranu.</p>
-          <a class="stretched" href="blizej.html"></a>
+          <p>WhatsApp, Messenger – wideo i udostępnianie ekranu.</p>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>💰 Pieniądze – zakupy, opłaty, usługi</h3>
           <p>Płatności, bankowość, zakupy online.</p>
-          <a class="stretched" href="pieniadze.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>🏥 Zdrowie – lekarz, recepty, skierowania</h3>
           <p>Jak sprawdzić e-recepty i umówić wizytę.</p>
-          <a class="stretched" href="zdrowie.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>🏛️ Urząd – sprawy obywatelskie</h3>
           <p>Załatwianie spraw urzędowych online.</p>
-          <a class="stretched" href="urzad.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>🚨 Alert! Oszustwo</h3>
           <p>Najczęstsze triki i jak się bronić.</p>
-          <a class="stretched" href="oszustwo.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
         <article class="tile">
           <h3>🌸 Pasje – hobby, rozrywka, kreatywność</h3>
           <p>Rozwijaj zainteresowania i korzystaj z kultury online.</p>
-          <a class="stretched" href="pasje.html"></a>
+          <a class="stretched" href="#"></a>
         </article>
       </div>
     </section>
