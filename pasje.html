@@ -5,15 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>🌸 Pasje — Strefa Wiedzy</title>
   <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;line-height:1.6;background:#f9f9f9;color:#333}
-    header{background:#56AFE3;color:#fff;padding:1rem;display:flex;justify-content:space-between;align-items:center}
-    header h1{margin:0;font-size:1.2rem}
-    a.btn{background:#fff;color:#26295C;padding:.5rem 1rem;border-radius:.6rem;text-decoration:none;font-weight:bold}
-    .section{padding:1rem;max-width:1000px;margin:0 auto}
-    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
-    .card{background:#fff;border:1px solid #ddd;border-radius:1rem;padding:1rem;text-decoration:none;color:#000;transition:.3s}
-    .card:hover{background:#f0f8ff}
-    iframe{border:none;border-radius:.6rem}
+    body {
+      margin:0;
+      font-family:system-ui,Segoe UI,Roboto,Arial;
+      line-height:1.6;
+      background:#f9f9f9;
+      color:#333;
+    }
+    header {
+      background:#56AFE3;
+      color:#fff;
+      padding:1rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    header h1 {
+      margin:0;
+      font-size:1.2rem;
+    }
+    a.btn {
+      background:#fff;
+      color:#26295C;
+      padding:.5rem 1rem;
+      border-radius:.6rem;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .section {
+      padding:1rem;
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .grid {
+      display:grid;
+      gap:1rem;
+      grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    }
+    .card {
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:1rem;
+      padding:1rem;
+      text-decoration:none;
+      color:#000;
+      transition:.3s;
+    }
+    .card:hover {
+      background:#f0f8ff;
+    }
+    iframe {
+      border:none;
+      border-radius:.6rem;
+    }
   </style>
 </head>
 <body>
@@ -24,18 +68,12 @@
 
   <main class="section">
     <p>W tej sekcji znajdziesz inspiracje związane z kulturą, sztuką i rozrywką online.</p>
-    <div class="grid">
 
+    <div class="grid">
       <a href="https://ninateka.pl/" target="_blank" rel="noopener" class="card">
         <h3>🎬 Serwisy filmowe</h3>
         <p>Obejrzyj spektakle, filmy i koncerty online w serwisie Ninateka i innych platformach.</p>
       </a>
-
-      <div class="card">
-        <h3>📚 Wolne Lektury</h3>
-        <p>Czytaj darmowe książki online lub pobierz na smartfon i tablet.</p>
-        <iframe src="https://wolnelektury.pl/katalog/" width="100%" height="300"></iframe>
-      </div>
 
       <a href="https://czytio.pl/blog/jak-czytac-e-booki-za-darmo-legalne-sposoby-i-najlepsze-zrodla-2025"
          target="_blank" rel="noopener" class="card">
@@ -59,7 +97,13 @@
         <p>Odkrywaj dzieła sztuki online i baw się w interaktywne gry, takie jak Puzzle Party czy Pet Portraits. 
         Dowiedz się też, jak zmienić język na polski.</p>
       </a>
+    </div>
 
+    <!-- Widget Wolnych Lektur osobno -->
+    <div style="margin-top:2rem;">
+      <h3>📚 Wolne Lektury – katalog online</h3>
+      <p>Przeglądaj i wybieraj darmowe książki bezpośrednio tutaj:</p>
+      <iframe src="https://wolnelektury.pl/katalog/" width="100%" height="600"></iframe>
     </div>
   </main>
 </body>
