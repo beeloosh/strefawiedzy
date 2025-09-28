@@ -8,10 +8,9 @@
     body { font-family: system-ui, sans-serif; margin:0; background:#f9fafb; color:#111; line-height:1.6; }
     header { background:#3BA6E6; color:#fff; padding:1rem 2rem; }
     header h1 { margin:0; font-size:1.4rem; }
-    main { max-width:850px; margin:auto; padding:2rem 1rem; }
+    main { max-width:950px; margin:auto; padding:2rem 1rem; }
     article h2 { margin-top:1.8rem; font-size:1.25rem; }
     article p { margin:.8rem 0; }
-    ul { margin:0.5rem 0 1rem 1.5rem; }
     footer { margin-top:2rem; }
     a.back {
       display:inline-block;
@@ -24,6 +23,60 @@
     }
     a.ext { color:#0052A5; text-decoration:none; }
     a.ext:hover { text-decoration:underline; }
+
+    /* --- kafelki linków --- */
+    .icon-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin: 1rem 0 1.5rem;
+    }
+    .icon-tile {
+      position: relative;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+      overflow: hidden;
+    }
+    .icon-tile:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,.10); }
+    .icon-tile .emoji {
+      font-size: 1.8rem;
+      line-height: 1;
+      display: inline-block;
+      margin-bottom: .4rem;
+    }
+    .icon-tile h3 {
+      margin: 0 0 .25rem 0;
+      font-size: 1rem;
+    }
+    .icon-tile p {
+      margin: 0;
+      font-size: .9rem;
+      color: #475569;
+    }
+    .icon-tile a.stretched {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+    .icon-tile .meta {
+      margin-top: .6rem;
+      font-size: .8rem;
+      color: #334155;
+      opacity: .85;
+    }
+    .badge-mini {
+      display: inline-block;
+      background: #e6f2ff;
+      color: #0f5ca8;
+      border: 1px solid #cfe6ff;
+      padding: .1rem .4rem;
+      border-radius: 999px;
+      font-size: .75rem;
+    }
   </style>
 </head>
 <body>
@@ -35,69 +88,85 @@
     <article>
       <p>Dla wielu seniorów internet to przestrzeń do odkrywania nowych hobby, utrzymywania kontaktów i rozwijania pasji. Ważne, by korzystać z niego świadomie i bezpiecznie.</p>
 
-      <h2>Rozrywka online</h2>
-      <ul>
-        <li>📺 <strong>Filmy i seriale</strong> – 
-          <a class="ext" href="https://www.netflix.com/" target="_blank">Netflix</a>, 
-          <a class="ext" href="https://www.primevideo.com/" target="_blank">Prime Video</a>, 
-          <a class="ext" href="https://www.youtube.com/" target="_blank">YouTube</a>.
-        </li>
+      <h2>Aplikacje i serwisy</h2>
+      <div class="icon-grid">
+        <article class="icon-tile">
+          <div class="emoji">🎬</div>
+          <h3>Netflix</h3>
+          <p>Filmy i seriale online.</p>
+          <a class="stretched" href="https://www.netflix.com/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">🎞️</div>
+          <h3>Prime Video</h3>
+          <p>Seriale, kino, dokumenty.</p>
+          <a class="stretched" href="https://www.primevideo.com/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">▶️</div>
+          <h3>YouTube</h3>
+          <p>Filmy, poradniki, muzyka.</p>
+          <a class="stretched" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">🎧</div>
+          <h3>Spotify</h3>
+          <p>Muzyka i podcasty.</p>
+          <a class="stretched" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">📚</div>
+          <h3>Legimi</h3>
+          <p>E-książki w abonamencie.</p>
+          <a class="stretched" href="https://www.legimi.pl/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">🏛️</div>
+          <h3>Arts & Culture</h3>
+          <p>Wirtualne muzea i wystawy.</p>
+          <a class="stretched" href="https://artsandculture.google.com/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">♟️</div>
+          <h3>Chess.com</h3>
+          <p>Szachy online dla każdego.</p>
+          <a class="stretched" href="https://www.chess.com/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">🎓</div>
+          <h3>Coursera</h3>
+          <p>Kursy i nauka online.</p>
+          <a class="stretched" href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+      </div>
 
-        <li>🎶 <strong>Muzyka i podcasty</strong> – 
-          <a class="ext" href="https://open.spotify.com/" target="_blank">Spotify</a>, 
-          <a class="ext" href="https://music.youtube.com/" target="_blank">YouTube Music</a>, 
-          <a class="ext" href="https://www.apple.com/pl/apple-music/" target="_blank">Apple Music</a>. <br>
-          ▶️ Poradnik: <a class="ext" href="https://www.youtube.com/watch?v=Xw3c-pAQb9w" target="_blank">Spotify na smartfonie dla seniorów (YouTube)</a> <br>
-          ▶️ Instrukcja: <a class="ext" href="https://www.youtube.com/watch?v=NBx3Gaqs7Yk" target="_blank">Spotify – jak zacząć (YouTube)</a>
-        </li>
+      <h2>📚 Wolne Lektury – darmowe książki online</h2>
+      <p>Dzięki Wolnym Lekturom możesz czytać klasykę literatury polskiej i światowej całkowicie za darmo.</p>
+      <div id="wl"></div>
+      <script type="text/javascript" src="//static.wolnelektury.pl/js/widget.js"></script>
 
-        <li>📚 <strong>E-książki i audiobooki</strong> – 
-          <a class="ext" href="https://play.google.com/store/books" target="_blank">Google Play Books</a>, 
-          <a class="ext" href="https://www.legimi.pl/" target="_blank">Legimi</a>, 
-          <a class="ext" href="https://www.audible.com/" target="_blank">Audible</a>. <br>
-          ▶️ Instrukcja: <a class="ext" href="https://www.youtube.com/watch?v=6M7gYV6zFoM" target="_blank">Jak czytać e-booki na telefonie (YouTube)</a>
-        </li>
-
-        <li>🎲 <strong>Gry logiczne</strong> – 
-          <a class="ext" href="https://www.chess.com/" target="_blank">Chess.com</a>, 
-          <a class="ext" href="https://www.jigsawexplorer.com/" target="_blank">Puzzle online</a>.
-        </li>
-
-        <li>🏛️ <strong>Wirtualne muzea</strong> – 
-          <a class="ext" href="https://artsandculture.google.com/" target="_blank">Google Arts & Culture</a>. <br>
-          ▶️ Film instruktażowy: <a class="ext" href="https://www.youtube.com/c/googleartsculture/videos" target="_blank">Kanał Google Arts & Culture (YouTube)</a>
-        </li>
-
-        <li>🎓 <strong>Kursy online</strong> – 
-          <a class="ext" href="https://www.coursera.org/" target="_blank">Coursera</a>, 
-          <a class="ext" href="https://www.udemy.com/" target="_blank">Udemy</a>, 
-          <a class="ext" href="https://www.duolingo.com/" target="_blank">Duolingo</a>.
-        </li>
-      </ul>
-
-      <h2>Rekomendacje dla początkujących</h2>
-      <ul>
-        <li>📖 Zacznij od <strong>Legimi</strong> – biblioteka online z darmowym okresem próbnym.</li>
-        <li>🎶 Wypróbuj <strong>Spotify Free</strong> – muzyka i podcasty bez płatnej subskrypcji.</li>
-        <li>🏛️ Otwórz <strong>Google Arts & Culture</strong> – wirtualne muzea dostępne od razu.</li>
-        <li>🎲 Zagraj w darmowe <strong>Sudoku</strong> lub puzzle online.</li>
-      </ul>
-
-      <h2>Zasady bezpieczeństwa</h2>
-      <ul>
-        <li>✔️ Korzystaj tylko z legalnych aplikacji i stron.</li>
-        <li>✔️ Nie podawaj danych osobowych w podejrzanych miejscach.</li>
-        <li>✔️ Włącz silne hasła i weryfikację dwuetapową.</li>
-        <li>✔️ Zawsze sprawdzaj, czy strona ma kłódkę 🔒 przy adresie.</li>
-      </ul>
-
-      <h2>Podsumowanie</h2>
-      <p>Internet to świetna przestrzeń do rozwijania pasji i kontaktu z innymi. Zacznij od prostych i bezpiecznych aplikacji, a krok po kroku odkryjesz nowe hobby i formy rozrywki.</p>
-    </article>
-
-    <footer>
-      <a href="index.html" class="back">⬅️ Powrót do strony głównej</a>
-    </footer>
-  </main>
-</body>
-</html>
+      <h2>Poradniki wideo (po polsku)</h2>
+      <div class="icon-grid">
+        <article class="icon-tile">
+          <div class="emoji">🎧</div>
+          <h3>Spotify dla seniorów</h3>
+          <p>Instalacja i podstawy na telefonie.</p>
+          <div class="meta"><span class="badge-mini">Poradnik PL</span></div>
+          <a class="stretched" href="https://www.youtube.com/watch?v=Xw3c-pAQb9w" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">🎶</div>
+          <h3>Spotify – jak zacząć</h3>
+          <p>Rejestracja, playlisty, wyszukiwanie.</p>
+          <div class="meta"><span class="badge-mini">Poradnik PL</span></div>
+          <a class="stretched" href="https://www.youtube.com/watch?v=NBx3Gaqs7Yk" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div class="emoji">📖</div>
+          <h3>E-booki na telefonie</h3>
+          <p>Jak czytać wygodnie e-książki.</p>
+          <div class="meta"><span class="badge-mini">Poradnik PL</span></div>
+          <a class="stretched" href="https://www.youtube.com/watch?v=6M7gYV6zFoM" target="_blank" rel="noopener noreferrer"></a>
+        </article>
+        <article class="icon-tile">
+          <div clas
